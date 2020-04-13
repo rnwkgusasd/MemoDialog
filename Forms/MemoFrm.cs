@@ -72,7 +72,10 @@ namespace MemoDialog.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(MessageFrm.ShowDialog("Exit Program ?") == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

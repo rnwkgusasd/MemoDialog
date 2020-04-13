@@ -33,6 +33,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -101,6 +101,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(356, 40);
             this.panel5.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("배달의민족 주아", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(64, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "100 %";
             // 
             // panel6
             // 
@@ -261,7 +271,7 @@
             this.panel11.Location = new System.Drawing.Point(12, 15);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(6);
-            this.panel11.Size = new System.Drawing.Size(265, 73);
+            this.panel11.Size = new System.Drawing.Size(291, 73);
             this.panel11.TabIndex = 0;
             // 
             // textBox1
@@ -274,34 +284,25 @@
             this.textBox1.MaxLength = 100;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 61);
+            this.textBox1.Size = new System.Drawing.Size(279, 61);
             this.textBox1.TabIndex = 0;
             this.textBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(235)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("배달의민족 주아", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(283, 15);
+            this.button1.Image = global::MemoDialog.Properties.Resources.add_32px;
+            this.button1.Location = new System.Drawing.Point(309, 15);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 73);
+            this.button1.Size = new System.Drawing.Size(39, 73);
             this.button1.TabIndex = 1;
             this.button1.TabStop = false;
-            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("배달의민족 주아", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "100 %";
             // 
             // MemoFrm
             // 
@@ -313,6 +314,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MemoFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemoFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MemoFrm_FormClosing);
             this.Load += new System.EventHandler(this.MemoFrm_Load);

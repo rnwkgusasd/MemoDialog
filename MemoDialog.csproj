@@ -67,6 +67,12 @@
     <Compile Include="Forms\MemoPanelFrm.designer.cs">
       <DependentUpon>MemoPanelFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MessageFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageFrm.Designer.cs">
+      <DependentUpon>MessageFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MemoFrm.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MemoPanelFrm.resx">
       <DependentUpon>MemoPanelFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageFrm.resx">
+      <DependentUpon>MessageFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_note.ico" />
+    <None Include="Resources\add_32px.png" />
+    <None Include="Resources\trash_can_15px.png" />
+    <None Include="Resources\edit_15px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
