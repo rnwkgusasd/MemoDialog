@@ -20,6 +20,9 @@ namespace MemoDialog.Forms
         public string LabelText = "";
         public string LabelDateTime = "";
 
+        public delegate void EditMemo(string tData);
+        public event EditMemo mEditEvent;
+
         public MemoPanelFrm(string pText, string pDateTime)
         {
             InitializeComponent();
@@ -57,6 +60,13 @@ namespace MemoDialog.Forms
             timer1.Enabled = false;
 
             this.Parent.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mEditEvent(LabelText);
+
+            this.Close();
         }
     }
 }

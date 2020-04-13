@@ -237,6 +237,15 @@ namespace MemoDialog.Forms
                 TopMost = true,
                 Parent = tPn
             };
+
+            frm.mEditEvent += (data) => 
+            {
+                Invoke(new Action(() =>
+                {
+                    textBox1.Text = data;
+                }));
+            };
+
             tPn.Controls.Add(frm);
             frm.Show();
 
