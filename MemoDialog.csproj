@@ -52,9 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CustomGroupBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Classes\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\RoundRectRgn.cs" />
     <Compile Include="Forms\MemoFrm.cs">
       <SubType>Form</SubType>
     </Compile>

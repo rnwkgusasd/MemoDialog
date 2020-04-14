@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -17,23 +16,12 @@ namespace MemoDialog.Forms
         private Point CurrMousePos;
 
         private string memoPath = Application.StartupPath + "\\MEMO.txt";
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse // height of ellipse
-        );
-
+        
         public MemoFrm()
         {
             InitializeComponent();
 
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 5, 5));
+            this.Region = System.Drawing.Region.FromHrgn(Classes.RoundRectRgn.CreateRoundRectRgn(0, 0, Width, Height, 5, 5));
         }
 
         private void DragForm(object sender, MouseEventArgs e)
@@ -229,7 +217,7 @@ namespace MemoDialog.Forms
             tPn.Size = new Size(300, 80);
             tPn.BackColor = Color.FromArgb(255, 250, 235);
             tPn.BorderStyle = BorderStyle.None;
-            tPn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, tPn.Width, tPn.Height, 10, 15));
+            tPn.Region = System.Drawing.Region.FromHrgn(Classes.RoundRectRgn.CreateRoundRectRgn(0, 0, tPn.Width, tPn.Height, 10, 15));
 
             string tDateTime = pDateTime == null ? DateTime.Now.ToString("yyyy.MM.dd") : pDateTime;
 
