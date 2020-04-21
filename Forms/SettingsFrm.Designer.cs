@@ -160,6 +160,7 @@
             this.Controls.Add(this.roundButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingsFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SettingsFrm";
             this.ResumeLayout(false);
             this.PerformLayout();
