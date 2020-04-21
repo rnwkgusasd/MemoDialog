@@ -215,7 +215,7 @@ namespace MemoDialog.Forms
         {
             Panel tPn = new Panel();
             tPn.Size = new Size(300, 80);
-            tPn.BackColor = Color.FromArgb(255, 250, 235);
+            tPn.BackColor = Color.Transparent;
             tPn.BorderStyle = BorderStyle.None;
             tPn.Region = System.Drawing.Region.FromHrgn(Classes.RoundRectRgn.CreateRoundRectRgn(0, 0, tPn.Width, tPn.Height, 10, 15));
 
@@ -244,6 +244,82 @@ namespace MemoDialog.Forms
             textBox1.Focus();
 
             flowLayoutPanel1.Controls.Add(tPn);
+        }
+
+        public enum Color_Mode { ORANGE = 0, COL2 = 1, COL3 = 2 }
+
+        public Color_Mode mCurrColor = Color_Mode.ORANGE;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SettingsFrm frm = new SettingsFrm();
+
+            frm.r_event += GetColorEvent;
+            frm.ShowDialog();
+        }
+
+        public void GetColorEvent(int num)
+        {
+            mCurrColor = (Color_Mode)num;
+            ColorChange();
+        }
+
+        private void ColorChange()
+        {
+            switch(mCurrColor)
+            {
+                case Color_Mode.ORANGE:
+
+                    Classes.MemoColor.mColr1 = Color.FromArgb(255, 250, 235);
+                    Classes.MemoColor.mColr2 = Color.FromArgb(255, 192, 128);
+                    Classes.MemoColor.mColr3 = Color.FromArgb(255, 224, 192);
+                    Classes.MemoColor.mColr4 = Color.FromArgb(250, 240, 230);
+
+                    break;
+
+                case Color_Mode.COL2:
+
+                    Classes.MemoColor.mColr1 = Color.FromArgb(250, 255, 235);
+                    Classes.MemoColor.mColr2 = Color.FromArgb(192, 255, 128);
+                    Classes.MemoColor.mColr3 = Color.FromArgb(224, 255, 192);
+                    Classes.MemoColor.mColr4 = Color.FromArgb(240, 250, 230);
+
+                    break;
+
+                case Color_Mode.COL3:
+
+                    Classes.MemoColor.mColr1 = Color.FromArgb(250, 235, 255);
+                    Classes.MemoColor.mColr2 = Color.FromArgb(192, 128, 255);
+                    Classes.MemoColor.mColr3 = Color.FromArgb(224, 192, 255);
+                    Classes.MemoColor.mColr4 = Color.FromArgb(240, 230, 250);
+
+                    break;
+            }
+
+            #region Change Design
+
+            panel1.BackColor = Classes.MemoColor.mColr2;
+
+            btnClose.BackColor = Classes.MemoColor.mColr1;
+            btnMinimize.BackColor = Classes.MemoColor.mColr1;
+            button2.BackColor = Classes.MemoColor.mColr1;
+
+            panel2.BackColor = Classes.MemoColor.mColr1;
+
+            panel3.BackColor = Classes.MemoColor.mColr3;
+            panel4.BackColor = Classes.MemoColor.mColr3;
+            panel7.BackColor = Classes.MemoColor.mColr3;
+            panel10.BackColor = Classes.MemoColor.mColr3;
+
+            button1.BackColor = Classes.MemoColor.mColr3;
+
+            panel8.BackColor = Classes.MemoColor.mColr2;
+
+            panel5.BackColor = Classes.MemoColor.mColr4;
+            panel6.BackColor = Classes.MemoColor.mColr4;
+            panel9.BackColor = Classes.MemoColor.mColr4;
+
+            #endregion
         }
     }
 }

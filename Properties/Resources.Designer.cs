@@ -83,6 +83,16 @@ namespace MemoDialog.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap gear_15px {
+            get {
+                object obj = ResourceManager.GetObject("gear_15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap trash_can_15px {
             get {
                 object obj = ResourceManager.GetObject("trash_can_15px", resourceCulture);

@@ -9,6 +9,7 @@ namespace MemoDialog.Forms
         {
             InitializeComponent();
             this.Region = System.Drawing.Region.FromHrgn(Classes.RoundRectRgn.CreateRoundRectRgn(0, 0, Width, Height, 5, 5));
+            this.BackColor = MemoDialog.Classes.MemoColor.mColr2;
             label1.Text = pMsg;
         }
 
